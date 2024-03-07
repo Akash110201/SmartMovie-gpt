@@ -20,3 +20,5 @@ export const NOW_PLAYING_MOVIES_API =
 
 export const POPULAR_MOVIES_API =
   "https://api.themoviedb.org/3/movie/popular?page=1";
+
+
