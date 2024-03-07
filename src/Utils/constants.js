@@ -6,3 +6,14 @@ export const BANNER_URL =
 
 export const CAT_URL =
   "https://t4.ftcdn.net/jpg/00/97/58/97/360_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg";
+
+export const API_OPTIONS = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNGI4ZjE4NTQyNDQxNTI4OTIxYzUyOTc1NTJhZDEyNiIsInN1YiI6IjY1ZTk0N2I2N2M2ZGUzMDE3YzA4NmRkYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZkeefGvK-D5gOIDxGhMWaG6FhFmCdmA78TmOXHeAGDY",
+  },
+};
+export const NOW_PLAYING_MOVIES_API =
+  "https://api.themoviedb.org/3/movie/now_playing?page=1";
