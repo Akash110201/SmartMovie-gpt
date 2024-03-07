@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { CAT_URL, LOGO_URL } from "../Utils/constants";
 import { useNavigate } from "react-router-dom";
-import { getAuth, signOut } from "firebase/auth";
-import { useSelector } from "react-redux";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import { useDispatch, useSelector } from "react-redux";
+import { auth } from "../Utils/firebase";
+import { addUser, removeUser } from "../Utils/userSlice";
 
 const Header = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
   const handleButtonClick = () => {
     const auth = getAuth();
@@ -17,6 +20,18 @@ const Header = () => {
         // An error happened.
       });
   };
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const { uid, email, displayName } = user;
+        dispatch(addUser({ uid: uid, email: email, displayName: displayName }));
+        navigate("/browse");
+      } else {
+        dispatch(removeUser());
+        navigate("/");
+      }
+    });
+  }, []);
   return (
     <div className="">
       <div className=" px-28 py-4 bg-gradient-to-b from-black w-full absolute z-10">
