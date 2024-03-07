@@ -64,11 +64,11 @@ const Login = () => {
   return (
     <div className="">
       <Header />
-      <div className="absolute">
+      <div className="absolute ">
         <img
           alt="banner"
           src={BANNER_URL}
-          className="h-screen w-screen object-cover"
+          className="h-screen w-screen object-cover blur-sm"
         />
       </div>
       <form
