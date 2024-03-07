@@ -1,6 +1,7 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
-const VideoBackground = () => {
+const VideoBackground = ({ movieId }) => {
   return <div>VideoBackground</div>;
 };
 
