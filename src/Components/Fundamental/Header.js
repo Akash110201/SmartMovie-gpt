@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import { CAT_URL, LOGO_URL } from "../Utils/constants";
+import { CAT_URL, LOGO_URL } from "../../Utils/constants";
 import { useNavigate } from "react-router-dom";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
-import { auth } from "../Utils/firebase";
-import { addUser, removeUser } from "../Utils/userSlice";
+import { auth } from "../../Utils/firebase";
+import { addUser, removeUser } from "../../Utils/userSlice";
 
 const Header = () => {
   const navigate = useNavigate();
