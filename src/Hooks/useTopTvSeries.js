@@ -12,7 +12,7 @@ const useTopTvSeries = () => {
   const getTopTvSeries = async () => {
     const data = await fetch(TOP_TVSERIES_API, API_OPTIONS);
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     dispatch(addTopTvSeries(json.results));
   };
 
