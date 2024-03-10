@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/Components/Header.js
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,6 +8,15 @@ import { auth } from "../Utils/firebase";
 import { addUser, removeUser } from "../Utils/userSlice";
 import { toggleGptSearchView } from "../Utils/gptSlice";
 import { changeLanguage } from "../Utils/configSlice";
+=======
+import React, { useEffect } from "react";
+import { CAT_URL, LOGO_URL } from "../../Utils/constants";
+import { useNavigate } from "react-router-dom";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import { useDispatch, useSelector } from "react-redux";
+import { auth } from "../../Utils/firebase";
+import { addUser, removeUser } from "../../Utils/userSlice";
+>>>>>>> 87c3f440b7d9451b1fa908fac663c9bdea04d232:src/Components/Fundamental/Header.js
 
 const Header = () => {
   const dispatch = useDispatch();

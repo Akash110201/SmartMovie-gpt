@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { BANNER_URL } from "../Utils/constants";
-import Header from "./Header";
+import Header from "./Fundamental/Header";
 import { checkValidData } from "../Utils/validate";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Utils/firebase";
